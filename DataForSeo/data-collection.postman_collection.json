@@ -1,0 +1,62 @@
+{
+	"variables": [],
+	"info": {
+		"name": "data-collection",
+		"_postman_id": "41544c92-6b39-6665-deb3-f5b73f055a77",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create-data",
+			"request": {
+				"url": "https://localhost:5001/api/data",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"webSite\": 'test',\n\t\"position\": 0,\n\t\"taskId\": 'test',\n\t\"searchEngine\": 'test',\n\t\"status\": 'test',\n\t\"keyWord\": 'test'\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "get-data",
+			"request": {
+				"url": "https://localhost:5001/api/data",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "edit-data-status-and-position-only",
+			"request": {
+				"url": "https://localhost:5001/api/data",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"id\": 1,\n        \"taskId\": \"08110641-1511-0066-0000-fd8f5ba821e8\",\n        \"keyWord\": \"clear form builder angula\",\n        \"searchEngine\": \"google\",\n        \"webSite\": \"codecraft.tv\",\n        \"position\": 3,\n        \"status\": \"tracked\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

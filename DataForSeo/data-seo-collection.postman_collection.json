@@ -1,0 +1,53 @@
+{
+	"variables": [],
+	"info": {
+		"name": "data-seo-collection",
+		"_postman_id": "6d37e0ec-0f4e-f149-d398-afd204e9cbab",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get-regions",
+			"request": {
+				"url": "https://localhost:5001/api/dataseo/regions/google",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "check-status-tracked-or-processing",
+			"request": {
+				"url": "https://localhost:5001/api/dataseo/check_status/google/08110641-1511-0066-0000-fd8f5ba821e8",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "send-task-post",
+			"request": {
+				"url": "https://localhost:5001/api/dataseo/send",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"region\": \"New Zealand\",\n\t\"locationCode\": 2554,\n\t\"searchEngine\": \"google\",\n\t\"keyWords\": [\n\t\t\t\"abracadbra\"\n\t\t]\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
