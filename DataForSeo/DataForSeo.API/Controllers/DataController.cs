@@ -10,7 +10,7 @@
     [ApiController]
     public class DataController : ControllerBase
     {
-        private readonly IDataService dataService;
+        private readonly IDataService dataService1;
 
         public DataController(IDataService _dataService)
         {   
